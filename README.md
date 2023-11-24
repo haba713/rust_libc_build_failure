@@ -1,5 +1,4 @@
-This is a copy of [BB8 PostgreSQL transaction example][1].
-
+This is a copy of [BB8 PostgreSQL transaction example][1]. [Cargo.toml](Cargo.toml) is copied from [here][2].
 Building fails on Mac M2:
 
 ```
@@ -40,3 +39,4 @@ Caused by:
 How to fix it?
 
 [1]: https://github.com/djc/bb8/blob/main/postgres/examples/txn.rs
+[2]: https://github.com/djc/bb8/blob/main/postgres/Cargo.toml
