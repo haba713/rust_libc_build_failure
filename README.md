@@ -1,5 +1,6 @@
 This is a copy of [BB8 PostgreSQL transaction example][1]. [Cargo.toml](Cargo.toml) is copied from [here][2].
-Building fails on Mac M2:
+
+Building fails on macOS with M2 processor:
 
 ```
 $ cargo build
@@ -33,10 +34,14 @@ Caused by:
   thread 'main' panicked at .../.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/lib.rs:128:20:
   called `Result::unwrap()` on an `Err` value: Error { kind: Other("could not execute rustc") }
   note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-
 ```
 
 How to fix it?
+
+The environment:
+- macOS 13.6.1, Apple Silicon M2
+- cargo 1.74.0 (ecb9851af 2023-10-18)
+- rustc 1.74.0 (79e9716c9 2023-11-13)
 
 [1]: https://github.com/djc/bb8/blob/main/postgres/examples/txn.rs
 [2]: https://github.com/djc/bb8/blob/main/postgres/Cargo.toml
