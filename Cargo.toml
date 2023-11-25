@@ -4,12 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-async-trait = "0.1"
-bb8-postgres = { version = "0.8" }
-tokio = { version = "1.0.0", features = ["rt", "full"] }
-tokio-postgres = "0.7"
-
-[dev-dependencies]
-futures-util = "0.3.2"
-hyper = { version = "0.14.1", features = ["http1", "server", "tcp"] }
-tokio = { version = "1.0.0", features = ["macros", "rt-multi-thread"] }
+libc = "0.2.150"

@@ -1,0 +1,146 @@
+% CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true RUST_BACKTRACE=full cargo build -vv
+   Compiling libc v0.2.150
+     Running `CARGO=/Users/u0/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo CARGO_CRATE_NAME=build_script_build CARGO_MANIFEST_DIR=/Users/u0/.cargo/registry/src/index.crates.io-6f17d22bba15001f/libc-0.2.150 CARGO_PKG_AUTHORS='The Rust Project Developers' CARGO_PKG_DESCRIPTION='Raw FFI bindings to platform libraries like libc.
+' CARGO_PKG_HOMEPAGE='https://github.com/rust-lang/libc' CARGO_PKG_LICENSE='MIT OR Apache-2.0' CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=libc CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/rust-lang/libc' CARGO_PKG_RUST_VERSION='' CARGO_PKG_VERSION=0.2.150 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=2 CARGO_PKG_VERSION_PATCH=150 CARGO_PKG_VERSION_PRE='' DYLD_FALLBACK_LIBRARY_PATH='/private/var/scratch/rust_libc_build_failure/target/debug/deps:/Users/u0/.rustup/toolchains/stable-aarch64-apple-darwin/lib:/Users/u0/.rustup/toolchains/stable-aarch64-apple-darwin/lib:/Users/u0/lib:/usr/local/lib:/usr/lib' /Users/u0/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc --crate-name build_script_build /Users/u0/.cargo/registry/src/index.crates.io-6f17d22bba15001f/libc-0.2.150/build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debuginfo=2 -C split-debuginfo=unpacked --cfg 'feature="default"' --cfg 'feature="std"' -C metadata=6a425d90d2f322f0 -C extra-filename=-6a425d90d2f322f0 --out-dir /private/var/scratch/rust_libc_build_failure/target/debug/build/libc-6a425d90d2f322f0 -L dependency=/private/var/scratch/rust_libc_build_failure/target/debug/deps --cap-lints warn`
+     Running `/private/var/scratch/rust_libc_build_failure/target/debug/build/libc-6a425d90d2f322f0/build-script-build`
+[libc 0.2.150] cargo:rerun-if-changed=build.rs
+[libc 0.2.150] thread 'main' panicked at /Users/u0/.cargo/registry/src/index.crates.io-6f17d22bba15001f/libc-0.2.150/build.rs:204:9:
+[libc 0.2.150] failed to run rustc: 
+[libc 0.2.150] stack backtrace:
+[libc 0.2.150]    0:        0x100f45b64 - std::backtrace_rs::backtrace::libunwind::trace::hddb53f9645107e69
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/../../backtrace/src/backtrace/libunwind.rs:93:5
+[libc 0.2.150]    1:        0x100f45b64 - std::backtrace_rs::backtrace::trace_unsynchronized::hfcf876f940dc8da4
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5
+[libc 0.2.150]    2:        0x100f45b64 - std::sys_common::backtrace::_print_fmt::hf62909a9f73a69a7
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:67:5
+[libc 0.2.150]    3:        0x100f45b64 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::h4bff038afc05d0ab
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:44:22
+[libc 0.2.150]    4:        0x100f5cd40 - core::fmt::rt::Argument::fmt::h676aefe1d8d32022
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/fmt/rt.rs:138:9
+[libc 0.2.150]    5:        0x100f5cd40 - core::fmt::write::he9fa43146d420946
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/fmt/mod.rs:1114:21
+[libc 0.2.150]    6:        0x100f43b70 - std::io::Write::write_fmt::hf4fd30c8192b15d9
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/io/mod.rs:1763:15
+[libc 0.2.150]    7:        0x100f459a4 - std::sys_common::backtrace::_print::h8f03427ed63e3fce
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:47:5
+[libc 0.2.150]    8:        0x100f459a4 - std::sys_common::backtrace::print::h5d71f7b09493fc9b
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:34:9
+[libc 0.2.150]    9:        0x100f46ec0 - std::panicking::default_hook::{{closure}}::hb75620628e95e648
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:272:22
+[libc 0.2.150]   10:        0x100f46bd8 - std::panicking::default_hook::h4ac4acc64d21c4ad
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:292:9
+[libc 0.2.150]   11:        0x100f47404 - std::panicking::rust_panic_with_hook::h81dc715fa5de32cf
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:731:13
+[libc 0.2.150]   12:        0x100f4730c - std::panicking::begin_panic_handler::{{closure}}::h26c73eb75670321f
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:609:13
+[libc 0.2.150]   13:        0x100f45ff0 - std::sys_common::backtrace::__rust_end_short_backtrace::hef4773cf0f80485b
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:170:18
+[libc 0.2.150]   14:        0x100f47078 - rust_begin_unwind
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:597:5
+[libc 0.2.150]   15:        0x100f63a70 - core::panicking::panic_fmt::h10bd3bfe5bb30d67
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/panicking.rs:72:14
+[libc 0.2.150]   16:        0x100f20afc - build_script_build::rustc_minor_nightly::h758687256bda0dd5
+[libc 0.2.150]                                at /Users/u0/.cargo/registry/src/index.crates.io-6f17d22bba15001f/libc-0.2.150/build.rs:204:9
+[libc 0.2.150]   17:        0x100f1fd44 - build_script_build::main::h61fd516ffea24da6
+[libc 0.2.150]                                at /Users/u0/.cargo/registry/src/index.crates.io-6f17d22bba15001f/libc-0.2.150/build.rs:48:41
+[libc 0.2.150]   18:        0x100f24658 - core::ops::function::FnOnce::call_once::hcb11014ff2390c29
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/ops/function.rs:250:5
+[libc 0.2.150]   19:        0x100f27598 - std::sys_common::backtrace::__rust_begin_short_backtrace::hab764aef6d56672f
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:154:18
+[libc 0.2.150]   20:        0x100f2431c - std::rt::lang_start::{{closure}}::h57eb1bef17b76c14
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:166:18
+[libc 0.2.150]   21:        0x100f41164 - core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once::hdb9d57f6813b6639
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/ops/function.rs:284:13
+[libc 0.2.150]   22:        0x100f41164 - std::panicking::try::do_call::h3316be3da4e712e4
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:504:40
+[libc 0.2.150]   23:        0x100f41164 - std::panicking::try::h72745351e21d17fd
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:468:19
+[libc 0.2.150]   24:        0x100f41164 - std::panic::catch_unwind::h2df3aeb4d14c657e
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panic.rs:142:14
+[libc 0.2.150]   25:        0x100f41164 - std::rt::lang_start_internal::{{closure}}::h40cc69f0b809216f
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:148:48
+[libc 0.2.150]   26:        0x100f41164 - std::panicking::try::do_call::hdf604766e4bed556
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:504:40
+[libc 0.2.150]   27:        0x100f41164 - std::panicking::try::h52de1aaf80258115
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:468:19
+[libc 0.2.150]   28:        0x100f41164 - std::panic::catch_unwind::hec154f66f8285e2b
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panic.rs:142:14
+[libc 0.2.150]   29:        0x100f41164 - std::rt::lang_start_internal::haeade8bb0e866fa6
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:148:20
+[libc 0.2.150]   30:        0x100f242e8 - std::rt::lang_start::h6a3e450c672090a3
+[libc 0.2.150]                                at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:165:17
+[libc 0.2.150]   31:        0x100f21b54 - _main
+error: failed to run custom build command for `libc v0.2.150`
+
+Caused by:
+  process didn't exit successfully: `/private/var/scratch/rust_libc_build_failure/target/debug/build/libc-6a425d90d2f322f0/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-changed=build.rs
+
+  --- stderr
+  thread 'main' panicked at /Users/u0/.cargo/registry/src/index.crates.io-6f17d22bba15001f/libc-0.2.150/build.rs:204:9:
+  failed to run rustc: 
+  stack backtrace:
+     0:        0x100f45b64 - std::backtrace_rs::backtrace::libunwind::trace::hddb53f9645107e69
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/../../backtrace/src/backtrace/libunwind.rs:93:5
+     1:        0x100f45b64 - std::backtrace_rs::backtrace::trace_unsynchronized::hfcf876f940dc8da4
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5
+     2:        0x100f45b64 - std::sys_common::backtrace::_print_fmt::hf62909a9f73a69a7
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:67:5
+     3:        0x100f45b64 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::h4bff038afc05d0ab
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:44:22
+     4:        0x100f5cd40 - core::fmt::rt::Argument::fmt::h676aefe1d8d32022
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/fmt/rt.rs:138:9
+     5:        0x100f5cd40 - core::fmt::write::he9fa43146d420946
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/fmt/mod.rs:1114:21
+     6:        0x100f43b70 - std::io::Write::write_fmt::hf4fd30c8192b15d9
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/io/mod.rs:1763:15
+     7:        0x100f459a4 - std::sys_common::backtrace::_print::h8f03427ed63e3fce
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:47:5
+     8:        0x100f459a4 - std::sys_common::backtrace::print::h5d71f7b09493fc9b
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:34:9
+     9:        0x100f46ec0 - std::panicking::default_hook::{{closure}}::hb75620628e95e648
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:272:22
+    10:        0x100f46bd8 - std::panicking::default_hook::h4ac4acc64d21c4ad
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:292:9
+    11:        0x100f47404 - std::panicking::rust_panic_with_hook::h81dc715fa5de32cf
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:731:13
+    12:        0x100f4730c - std::panicking::begin_panic_handler::{{closure}}::h26c73eb75670321f
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:609:13
+    13:        0x100f45ff0 - std::sys_common::backtrace::__rust_end_short_backtrace::hef4773cf0f80485b
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:170:18
+    14:        0x100f47078 - rust_begin_unwind
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:597:5
+    15:        0x100f63a70 - core::panicking::panic_fmt::h10bd3bfe5bb30d67
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/panicking.rs:72:14
+    16:        0x100f20afc - build_script_build::rustc_minor_nightly::h758687256bda0dd5
+                                 at /Users/u0/.cargo/registry/src/index.crates.io-6f17d22bba15001f/libc-0.2.150/build.rs:204:9
+    17:        0x100f1fd44 - build_script_build::main::h61fd516ffea24da6
+                                 at /Users/u0/.cargo/registry/src/index.crates.io-6f17d22bba15001f/libc-0.2.150/build.rs:48:41
+    18:        0x100f24658 - core::ops::function::FnOnce::call_once::hcb11014ff2390c29
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/ops/function.rs:250:5
+    19:        0x100f27598 - std::sys_common::backtrace::__rust_begin_short_backtrace::hab764aef6d56672f
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/sys_common/backtrace.rs:154:18
+    20:        0x100f2431c - std::rt::lang_start::{{closure}}::h57eb1bef17b76c14
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:166:18
+    21:        0x100f41164 - core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once::hdb9d57f6813b6639
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/core/src/ops/function.rs:284:13
+    22:        0x100f41164 - std::panicking::try::do_call::h3316be3da4e712e4
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:504:40
+    23:        0x100f41164 - std::panicking::try::h72745351e21d17fd
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:468:19
+    24:        0x100f41164 - std::panic::catch_unwind::h2df3aeb4d14c657e
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panic.rs:142:14
+    25:        0x100f41164 - std::rt::lang_start_internal::{{closure}}::h40cc69f0b809216f
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:148:48
+    26:        0x100f41164 - std::panicking::try::do_call::hdf604766e4bed556
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:504:40
+    27:        0x100f41164 - std::panicking::try::h52de1aaf80258115
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panicking.rs:468:19
+    28:        0x100f41164 - std::panic::catch_unwind::hec154f66f8285e2b
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/panic.rs:142:14
+    29:        0x100f41164 - std::rt::lang_start_internal::haeade8bb0e866fa6
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:148:20
+    30:        0x100f242e8 - std::rt::lang_start::h6a3e450c672090a3
+                                 at /rustc/79e9716c980570bfd1f666e3b16ac583f0168962/library/std/src/rt.rs:165:17
+    31:        0x100f21b54 - _main
